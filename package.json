@@ -1,0 +1,23 @@
+{
+  "name": "token-saver",
+  "version": "0.1.0",
+  "description": "面向各类 AI harness 的 token 降耗技能包（编码、脚本与校准工具）",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "validate": "node tools/validate-skill.mjs",
+    "calibrate": "node tools/calibrate-estimator.mjs",
+    "measure": "node skills/token-efficiency/scripts/estimate-tokens.mjs",
+    "compress": "node skills/token-efficiency/scripts/compress-text.mjs",
+    "trim": "node skills/token-efficiency/scripts/trim-context.mjs",
+    "report": "node skills/token-efficiency/scripts/token-report.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "gpt-tokenizer": "^4.1.0"
+  },
+  "license": "MIT"
+}

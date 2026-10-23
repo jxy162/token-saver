@@ -1,0 +1,5 @@
+interface:
+  display_name: "Token Efficiency"
+  short_description: "Cut token usage and cost in LLM apps and agents"
+  brand_color: "#0F766E"
+  default_prompt: "Use $token-efficiency to cut token usage in this AI call without hurting answer quality."

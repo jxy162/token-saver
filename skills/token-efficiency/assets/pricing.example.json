@@ -1,0 +1,11 @@
+{
+  "_note": "示例价（USD / 1M token），可能过时；请替换为你所用模型的官方价格。键名支持前缀匹配，_default 为兜底。",
+  "_default": { "in": 1.0, "out": 3.0, "cachedIn": 0.3 },
+  "gpt-4o-mini": { "in": 0.15, "out": 0.6, "cachedIn": 0.075 },
+  "gpt-4.1-mini": { "in": 0.4, "out": 1.6, "cachedIn": 0.1 },
+  "gpt-4.1": { "in": 2.0, "out": 8.0, "cachedIn": 0.5 },
+  "claude-3-5-haiku": { "in": 0.8, "out": 4.0, "cachedIn": 0.08, "cacheWriteIn": 1.0 },
+  "claude-sonnet-4": { "in": 3.0, "out": 15.0, "cachedIn": 0.3, "cacheWriteIn": 3.75 },
+  "deepseek-chat": { "in": 0.27, "out": 1.1, "cachedIn": 0.07 },
+  "qwen-plus": { "in": 0.4, "out": 1.2, "cachedIn": 0.16 }
+}

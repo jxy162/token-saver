@@ -1,0 +1,5 @@
+{"ts":"2026-10-23T09:00:00Z","label":"classify-ticket","model":"gpt-4o-mini","inputTokens":1200,"outputTokens":60,"cachedInputTokens":1000,"baselineInputTokens":3000,"baselineOutputTokens":60}
+{"ts":"2026-10-23T09:01:00Z","label":"classify-ticket","model":"gpt-4o-mini","inputTokens":1250,"outputTokens":55,"cachedInputTokens":1100,"baselineInputTokens":3000,"baselineOutputTokens":55}
+{"ts":"2026-10-23T09:05:00Z","label":"code-review","model":"claude-sonnet-4","inputTokens":48000,"outputTokens":900,"cachedInputTokens":40000,"baselineInputTokens":62000,"baselineOutputTokens":1400}
+{"ts":"2026-10-23T09:20:00Z","label":"summarize-log","model":"gpt-4.1-mini","inputTokens":9000,"outputTokens":300,"cachedInputTokens":0,"baselineInputTokens":31000,"baselineOutputTokens":300}
+{"ts":"2026-10-23T09:31:00Z","label":"code-review","model":"claude-sonnet-4","inputTokens":47000,"outputTokens":850,"cachedInputTokens":41000,"baselineInputTokens":62000,"baselineOutputTokens":1400}

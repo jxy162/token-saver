@@ -1,0 +1,10 @@
+{
+  "maxBreakpoints": 4,
+  "blocks": [
+    { "id": "policy", "role": "system", "stability": "static", "content": "你是一个代码审查助手。规则：1) 只报告可复现的问题；2) 输出 JSON；3) 不要重述代码；4) 不确定就说不确定。\n" },
+    { "id": "schema", "role": "system", "stability": "static", "content": "输出 schema：{file:string,line:number,issue:string,severity:'low'|'medium'|'high',suggestion:string}[]\n" },
+    { "id": "reference-doc", "role": "user", "stability": "static", "content": "背景资料：本服务使用 PostgreSQL 15，连接池上限 20，超时 3 秒。连接必须在 finally 中释放；事务中禁止 await 耗时外部调用；不要在循环里开新连接。\n" },
+    { "id": "retrieved-chunk", "role": "user", "stability": "volatile", "content": "片段：handler.ts:102 在 await pool.query 之前没有释放连接。" },
+    { "id": "question", "role": "user", "stability": "volatile", "content": "这段代码为什么会连接泄漏？" }
+  ]
+}

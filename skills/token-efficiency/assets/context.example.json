@@ -1,0 +1,12 @@
+{
+  "budget": 3000,
+  "reserveOutput": 500,
+  "segments": [
+    { "id": "policy", "kind": "policy", "locked": true, "text": "你是代码审查助手。只报告可复现的问题；输出 JSON：{file,line,issue,severity,suggestion}；不要重述代码。" },
+    { "id": "task", "kind": "task", "locked": true, "text": "审查下面这次 diff，找出会导致连接泄漏或死锁的问题。" },
+    { "id": "doc-postgres", "kind": "retrieval", "priority": 55, "text": "背景资料：本服务使用 PostgreSQL 15，连接池上限 20，statement_timeout=3s，连接必须在 finally 中释放。这段背景资料很长，包含了大量与本次 diff 无关的历史说明，包括部署流程、灰度策略、回滚步骤、监控指标、告警阈值、值班手册、历史事故复盘等内容，其中只有'连接必须在 finally 中释放'这一句与当前任务相关。" },
+    { "id": "diff", "kind": "tool", "locked": true, "text": "diff --git a/src/handler.ts b/src/handler.ts\n+  const conn = await pool.connect();\n+  const rows = await conn.query('select 1');\n+  return rows;" },
+    { "id": "history-3", "kind": "history", "recency": 3, "text": "用户：上次你说这个仓库的连接池配置在 config/db.ts。\n助手：是的，max=20，idleTimeoutMillis=10000。" },
+    { "id": "history-1", "kind": "history", "recency": 1, "text": "用户：先看 src/handler.ts。\n助手：已打开，共 240 行，主要是 6 个 handler。" }
+  ]
+}
